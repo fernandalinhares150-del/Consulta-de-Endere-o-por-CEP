@@ -1,132 +1,174 @@
-/* Configuração geral */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Página inteira */
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #dfe2f2;
-
-    min-height: 100vh;
-    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #DEE0F0;
+    color: #333;
 }
 
-/* Área principal */
-.container {
-    width: 100%;
-    min-height: 100vh;
 
-    background-color: #dfe2f2;
-
+/* Cabeçalho */
+h1 {
+    background-color: #2D3E76;
+    color: white;
     text-align: center;
+    padding: 25px 10px 10px;
+    font-size: 28px;
 }
 
-/* Título azul */
-.container h1 {
-    width: 100%;
 
-    background-color: #30447f;
-    color: white;
-
-    font-size: 36px;
-    font-weight: normal;
-
-    padding: 55px 20px;
-}
-
-/* Área onde aparecem os resultados */
-#resultado {
-    width: 70%;
-    max-width: 900px;
-
-    margin: 70px auto 40px;
-
-    background-color: white;
-
-    padding: 35px;
-
-    text-align: left;
-
-    font-size: 20px;
-    line-height: 2;
-
-    box-shadow: 0 8px 22px rgba(48, 68, 127, 0.45);
-}
-
-/* Link para o Google Maps */
-#linkMaps {
+/* Texto abaixo do título */
+h1::after {
+    content: "Digite o CEP e a cidade para buscar o endereço.";
     display: block;
-
-    width: 70%;
-    max-width: 900px;
-
-    margin: 0 auto 40px;
-
-    padding: 20px;
-
-    background-color: #30447f;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 20px;
-
-    transition: 0.2s;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 12px;
+    padding-bottom: 25px;
 }
 
-/* Efeito no botão do Maps */
-#linkMaps:hover {
-    background-color: #26386b;
+
+/* Formulário */
+form {
+    width: 550px;
+    max-width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Área do link de nova consulta */
-.container p {
-    margin-top: 20px;
+
+/* Labels */
+label {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: Georgia, serif;
 }
 
-/* Link para voltar */
-.container p a {
-    display: inline-block;
 
-    padding: 20px 40px;
-
+/* Campos */
+input {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 30px;
     background-color: white;
-
-    color: #111;
-
-    text-decoration: none;
-
-    font-size: 20px;
-
-    box-shadow: 0 8px 22px rgba(48, 68, 127, 0.35);
-
-    transition: 0.2s;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
+
+
+/* Quando clicar no campo */
+input:focus {
+    outline: 2px solid #2D3E76;
+}
+
+
+/* Botão */
+button {
+    background-color: #2D3E76;
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 
 /* Efeito ao passar o mouse */
-.container p a:hover {
-    background-color: #f0f0f0;
+button:hover {
+    background-color: #1d3659;
 }
 
-/* Ajuste para telas menores */
-@media (max-width: 768px) {
 
-    #resultado,
-    #linkMaps {
-        width: 90%;
-    }
+/* Mensagem do JavaScript */
+#mensagem {
+    width: 550px;
+    max-width: 90%;
+    margin: -30px auto 20px;
+    text-align: center;
+    font-size: 16px;
+}
 
-    .container h1 {
-        font-size: 28px;
-        padding: 40px 15px;
-    }
+/*PÁGINA DE RESULTADO*/
 
-    #resultado {
-        font-size: 17px;
-        padding: 25px;
-    }
+#resultado {
+    width: 550px;
+    max-width: 90%;
+    margin: 50px auto 25px;
+    padding: 30px;
+
+    background-color: #e9e9e9;
+
+    font-size: 18px;
+    line-height: 2;
+}
+
+/* Cada informação do endereço */
+#resultado p {
+    margin: 8px 0;
+}
+
+/* Títulos como CEP, Bairro, Cidade */
+#resultado strong {
+    font-weight: bold;
+}
+
+
+/* Botão do Google Maps */
+#linkMaps {
+    display: block;
+    width: 550px;
+    max-width: 90%;
+
+    margin: 20px auto;
+    padding: 20px;
+
+    background-color: #2D3E76;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 20px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Efeito quando passa o mouse */
+#linkMaps:hover {
+    background-color: #1d3659;
+}
+
+
+/* Link Fazer nova consulta */
+body>p {
+    width: 550px;
+    max-width: 90%;
+
+    margin: 30px auto;
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: white;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Link */
+body>p a {
+    text-decoration: none;
+    color: #333;
+
+    font-size: 20px;
 }
