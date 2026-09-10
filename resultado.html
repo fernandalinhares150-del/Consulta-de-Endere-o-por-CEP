@@ -1,0 +1,42 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resultado da Consulta</title>
+
+    <!-- Liga o CSS à página -->
+    <link rel="stylesheet" href="style(6).css">
+</head>
+
+<body>
+
+    <!-- Caixa principal -->
+    <main class="container">
+
+        <h1>Resultado da consulta</h1>
+
+        <!-- Aqui aparecem os dados do endereço -->
+        <div id="resultado" role="status" aria-live="polite"></div>
+
+        <!-- Link para o Google Maps -->
+        <a id="linkMaps" hidden target="_blank" rel="noopener noreferrer">
+            Abrir no Google Maps
+        </a>
+
+        <!-- Voltar para fazer outra consulta -->
+        <p>
+            <a href="index(6).html">Fazer nova consulta</a>
+        </p>
+
+    </main>
+
+    <!-- JavaScript da página de resultado -->
+    <script src="resultado.js"></script>
+
+</body>
+
+</html>

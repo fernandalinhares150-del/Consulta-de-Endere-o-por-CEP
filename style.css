@@ -1,0 +1,132 @@
+/* Configuração geral */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Página inteira */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #dfe2f2;
+
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Área principal */
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #dfe2f2;
+
+    text-align: center;
+}
+
+/* Título azul */
+.container h1 {
+    width: 100%;
+
+    background-color: #30447f;
+    color: white;
+
+    font-size: 36px;
+    font-weight: normal;
+
+    padding: 55px 20px;
+}
+
+/* Área onde aparecem os resultados */
+#resultado {
+    width: 70%;
+    max-width: 900px;
+
+    margin: 70px auto 40px;
+
+    background-color: white;
+
+    padding: 35px;
+
+    text-align: left;
+
+    font-size: 20px;
+    line-height: 2;
+
+    box-shadow: 0 8px 22px rgba(48, 68, 127, 0.45);
+}
+
+/* Link para o Google Maps */
+#linkMaps {
+    display: block;
+
+    width: 70%;
+    max-width: 900px;
+
+    margin: 0 auto 40px;
+
+    padding: 20px;
+
+    background-color: #30447f;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    transition: 0.2s;
+}
+
+/* Efeito no botão do Maps */
+#linkMaps:hover {
+    background-color: #26386b;
+}
+
+/* Área do link de nova consulta */
+.container p {
+    margin-top: 20px;
+}
+
+/* Link para voltar */
+.container p a {
+    display: inline-block;
+
+    padding: 20px 40px;
+
+    background-color: white;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    box-shadow: 0 8px 22px rgba(48, 68, 127, 0.35);
+
+    transition: 0.2s;
+}
+
+/* Efeito ao passar o mouse */
+.container p a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+
+    #resultado,
+    #linkMaps {
+        width: 90%;
+    }
+
+    .container h1 {
+        font-size: 28px;
+        padding: 40px 15px;
+    }
+
+    #resultado {
+        font-size: 17px;
+        padding: 25px;
+    }
+}

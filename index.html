@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Endereço por CEP</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Consulta de Endereço por CEP</h1>
+
+        <p class="descricao">
+            Digite o CEP e a cidade para buscar o endereço.
+        </p>
+
+        <form id="formConsulta">
+
+            <label for="cep">CEP</label>
+
+            <input id="cep" type="text" inputmode="numeric" maxlength="9" placeholder="Ex: 88500-00" required>
+
+            <label for="cidade">Cidade</label>
+
+            <input id="cidade" type="text" placeholder="Ex: Lages" required>
+
+            <button type="submit">
+                Consultar Endereço
+            </button>
+
+        </form>
+
+        <p id="mensagem" role="status" aria-live="polite"></p>
+
+    </main>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
