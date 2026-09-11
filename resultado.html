@@ -2,20 +2,59 @@
 <html lang="pt-br">
 
 <head>
+
+    <!-- Define a codificação dos caracteres -->
     <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar ao celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da página -->
     <title>Consulta de endereço por CEP</title>
+
+    <!-- Liga o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Liga o manifesto da PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Ícone da aplicação -->
+    <link rel="icon" type="image/png" href="icons/icon-192.png">
+
+    <!-- Ícone para dispositivos Apple -->
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <!-- Permite funcionamento como aplicativo no iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
 </head>
-<link rel="stylesheet" href="style.css">
 
 <body>
 
+    <!-- Título da página -->
     <h1>Resultado da consulta</h1>
-    <div id="resultado" role="status" aria-live="polite"></div>
-    <a id="linkMaps" hidden target="_blank" rel="noopener noreferrer">Abrir no Google Maps</a>
-    <p><a href="index.html">Fazer nova consulta</a></p>
-    <script src="resultado.js"></script>
 
+    <!--
+        Área onde o JavaScript vai colocar
+        as informações do endereço
+    -->
+    <div id="resultado" role="status" aria-live="polite"></div>
+
+    <!--
+        Link para abrir o endereço no Google Maps.
+        Ele começa escondido.
+    -->
+    <a id="linkMaps" hidden target="_blank" rel="noopener noreferrer">
+        Abrir no Google Maps
+    </a>
+
+    <!-- Link para fazer uma nova consulta -->
+    <p>
+        <a href="index.html">Fazer nova consulta</a>
+    </p>
+
+    <!-- Liga o JavaScript da página de resultado -->
+    <script src="resultado.js"></script>
 
 </body>
 

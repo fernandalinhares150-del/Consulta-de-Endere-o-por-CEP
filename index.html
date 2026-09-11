@@ -1,46 +1,61 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Consulta de endereço por CEP</title>
+
+    <!-- Liga o CSS à página -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
 
 <body>
 
-    <!-- Título principal da página -->
+    <!-- Título principal -->
     <h1>Consulta de endereço por CEP</h1>
 
     <!-- Formulário para realizar a consulta -->
     <form id="formConsulta">
 
-        <!-- Nome do campo de CEP -->
+        <!-- Campo do CEP -->
         <label for="cep">CEP</label>
 
-        <!-- Campo para digitar o CEP -->
-        <input id="cep" type="text" inputmode="numeric" maxlength="9" placeholder="01001-000" required>
+        <input
+            id="cep"
+            type="text"
+            inputmode="numeric"
+            maxlength="9"
+            placeholder="01001-000"
+            required
+        >
 
-        <!-- Nome do campo de cidade -->
+        <!-- Campo da cidade -->
         <label for="cidade">Cidade</label>
 
-        <!-- Campo para digitar a cidade -->
-        <input id="cidade" type="text" placeholder="São Paulo" required>
+        <input
+            id="cidade"
+            type="text"
+            placeholder="São Paulo"
+            required
+        >
 
-        <!-- Botão para enviar a consulta -->
+        <!-- Botão de consulta -->
         <button type="submit">
             🔍 Consultar Endereço
         </button>
 
     </form>
 
-    <!-- Área onde as mensagens de erro serão mostradas -->
+    <!-- Área para mostrar mensagens -->
     <p id="mensagem" role="status" aria-live="polite"></p>
 
-    <!-- Liga o arquivo JavaScript -->
+    <!-- Liga o JavaScript -->
     <script src="index.js"></script>
 
 </body>
 
 </html>
+```

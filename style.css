@@ -1,174 +1,361 @@
+/* Remove as configurações padrão dos elementos */
 * {
     margin: 0;
     padding: 0;
+
+    /* Faz o tamanho incluir o padding e a borda */
     box-sizing: border-box;
 }
 
 
+/* Configurações gerais da página */
 body {
+    /* Define a fonte */
     font-family: Arial, sans-serif;
+
+    /* Cor de fundo */
     background-color: #DEE0F0;
+
+    /* Cor dos textos */
     color: #333;
 }
 
+/* CABEÇALHO */
 
-/* Cabeçalho */
+/* Estilo do título */
 h1 {
+    /* Cor azul */
     background-color: #2D3E76;
+
+    /* Cor branca para o texto */
     color: white;
+
+    /* Centraliza o texto */
     text-align: center;
+
+    /* Espaçamento interno */
     padding: 25px 10px 10px;
+
+    /* Tamanho da fonte */
     font-size: 28px;
 }
 
 
-/* Texto abaixo do título */
+/* Texto que aparece abaixo do título */
 h1::after {
+    /* Cria o texto pelo CSS */
     content: "Digite o CEP e a cidade para buscar o endereço.";
+
+    /* Coloca o texto em uma nova linha */
     display: block;
+
+    /* Tamanho da fonte */
     font-size: 14px;
+
+    /* Deixa o texto normal */
     font-weight: normal;
+
+    /* Espaço acima */
     margin-top: 12px;
+
+    /* Espaço abaixo */
     padding-bottom: 25px;
 }
 
+/* FORMULÁRIO */
 
-/* Formulário */
+/* Configuração do formulário */
 form {
+    /* Largura máxima */
     width: 550px;
+
+    /* Evita que ultrapasse a tela */
     max-width: 90%;
+
+    /* Centraliza o formulário */
     margin: 50px auto;
+
+    /* Organiza os elementos em coluna */
     display: flex;
     flex-direction: column;
 }
 
 
-/* Labels */
+/* Estilo dos textos dos campos */
 label {
+    /* Tamanho da fonte */
     font-size: 22px;
+
+    /* Deixa em negrito */
     font-weight: bold;
+
+    /* Espaço abaixo */
     margin-bottom: 10px;
+
+    /* Fonte dos labels */
     font-family: Georgia, serif;
 }
 
+/* CAMPOS */
 
-/* Campos */
+/* Estilo dos campos de entrada */
 input {
+    /* Ocupa toda a largura */
     width: 100%;
+
+    /* Espaçamento interno */
     padding: 18px;
+
+    /* Tamanho do texto */
     font-size: 16px;
+
+    /* Remove a borda padrão */
     border: none;
+
+    /* Espaço abaixo */
     margin-bottom: 30px;
+
+    /* Cor branca */
     background-color: white;
+
+    /* Sombra dos campos */
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 
-/* Quando clicar no campo */
+/* Efeito quando o campo é selecionado */
 input:focus {
+    /* Contorno azul */
     outline: 2px solid #2D3E76;
 }
 
+/* BOTÃO */
 
-/* Botão */
+/* Estilo do botão */
 button {
+    /* Cor do botão */
     background-color: #2D3E76;
+
+    /* Cor do texto */
     color: white;
+
+    /* Remove a borda */
     border: none;
+
+    /* Espaçamento interno */
     padding: 18px;
+
+    /* Tamanho do texto */
     font-size: 16px;
+
+    /* Mostra a mãozinha */
     cursor: pointer;
+
+    /* Cria uma animação */
     transition: 0.3s;
+
+    /* Tamanho mínimo para facilitar o toque */
+    min-height: 44px;
 }
 
 
-/* Efeito ao passar o mouse */
+/* Efeito quando o mouse passa pelo botão */
 button:hover {
+    /* Muda a cor */
     background-color: #1d3659;
 }
 
+/* MENSAGEM */
 
-/* Mensagem do JavaScript */
+/* Área onde aparecem as mensagens */
 #mensagem {
+    /* Largura */
     width: 550px;
+
+    /* Limita o tamanho em telas pequenas */
     max-width: 90%;
+
+    /* Centraliza */
     margin: -30px auto 20px;
+
+    /* Centraliza o texto */
     text-align: center;
+
+    /* Tamanho da fonte */
     font-size: 16px;
 }
 
-/*PÁGINA DE RESULTADO*/
+/* RESULTADO */
 
+/* Caixa com as informações do endereço */
 #resultado {
+    /* Largura */
     width: 550px;
+
+    /* Limita a largura */
     max-width: 90%;
+
+    /* Centraliza */
     margin: 50px auto 25px;
+
+    /* Espaçamento interno */
     padding: 30px;
 
+    /* Cor da caixa */
     background-color: #e9e9e9;
 
+    /* Tamanho do texto */
     font-size: 18px;
+
+    /* Espaçamento entre linhas */
     line-height: 2;
 }
 
+
 /* Cada informação do endereço */
 #resultado p {
+    /* Espaço entre os textos */
     margin: 8px 0;
 }
 
-/* Títulos como CEP, Bairro, Cidade */
+
+/* Deixa os nomes dos campos em negrito */
 #resultado strong {
     font-weight: bold;
 }
 
 
-/* Botão do Google Maps */
+/* GOOGLE MAPS */
+
+/* Estilo do link do Google Maps */
 #linkMaps {
+    /* Faz o link ocupar uma linha */
     display: block;
+
+    /* Largura */
     width: 550px;
+
+    /* Evita ultrapassar a tela */
     max-width: 90%;
 
+    /* Centraliza */
     margin: 20px auto;
+
+    /* Espaçamento interno */
     padding: 20px;
 
+    /* Cor do botão */
     background-color: #2D3E76;
+
+    /* Cor do texto */
     color: white;
 
+    /* Centraliza o texto */
     text-align: center;
+
+    /* Remove o sublinhado */
     text-decoration: none;
 
+    /* Tamanho da fonte */
     font-size: 20px;
 
+    /* Sombra */
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+
+    /* Facilita o toque no celular */
+    min-height: 44px;
 }
 
 
-/* Efeito quando passa o mouse */
+/* Efeito ao passar o mouse */
 #linkMaps:hover {
+    /* Muda a cor */
     background-color: #1d3659;
 }
 
+/* NOVA CONSULTA */
 
-/* Link Fazer nova consulta */
+/* Caixa do link para fazer outra consulta */
 body>p {
+    /* Largura */
     width: 550px;
+
+    /* Limita a largura */
     max-width: 90%;
 
+    /* Centraliza */
     margin: 30px auto;
+
+    /* Espaçamento interno */
     padding: 20px;
 
+    /* Centraliza o texto */
     text-align: center;
 
+    /* Cor de fundo */
     background-color: white;
 
+    /* Sombra */
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 
-/* Link */
+/* Estilo do link */
 body>p a {
+    /* Remove o sublinhado */
     text-decoration: none;
+
+    /* Cor do texto */
     color: #333;
 
+    /* Tamanho da fonte */
     font-size: 20px;
+}
+
+/* RESPONSIVIDADE */
+
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+
+    /* Diminui o tamanho do título */
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Diminui o espaço do formulário */
+    form {
+        margin: 30px auto;
+    }
+
+    /* Diminui o tamanho dos labels */
+    label {
+        font-size: 19px;
+    }
+
+    /* Diminui o tamanho do resultado */
+    #resultado {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    /* Diminui o botão do Maps em telas pequenas */
+    #linkMaps {
+        font-size: 17px;
+        padding: 16px;
+    }
+}
+
+
+/* Ajustes para telas maiores */
+@media (min-width: 768px) {
+
+    /* Aumenta um pouco o título */
+    h1 {
+        font-size: 32px;
+    }
+
+    /* Aumenta o espaço do formulário */
+    form {
+        max-width: 600px;
+    }
 }
