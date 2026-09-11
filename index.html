@@ -10,21 +10,36 @@
 
 <body>
 
+    <!-- Título principal da página -->
     <h1>Consulta de endereço por CEP</h1>
 
-
+    <!-- Formulário para realizar a consulta -->
     <form id="formConsulta">
-        <label for="cep">CEP</label>
-        <input id="cep" type="text" inputmode="numeric" maxlength="9" placeholder="01001-000" required>
-        <label for="cidade">Cidade</label>
-        <input id="cidade" type="text" placeholder="São Paulo" required>
-        <button type="submit"> 🔍Consultar Endereço</button>
 
+        <!-- Nome do campo de CEP -->
+        <label for="cep">CEP</label>
+
+        <!-- Campo para digitar o CEP -->
+        <input id="cep" type="text" inputmode="numeric" maxlength="9" placeholder="01001-000" required>
+
+        <!-- Nome do campo de cidade -->
+        <label for="cidade">Cidade</label>
+
+        <!-- Campo para digitar a cidade -->
+        <input id="cidade" type="text" placeholder="São Paulo" required>
+
+        <!-- Botão para enviar a consulta -->
+        <button type="submit">
+            🔍 Consultar Endereço
+        </button>
 
     </form>
-    <p id="mensagem" role="status" aria-live="polite"></p>
-    <script src="index.js"></script>
 
+    <!-- Área onde as mensagens de erro serão mostradas -->
+    <p id="mensagem" role="status" aria-live="polite"></p>
+
+    <!-- Liga o arquivo JavaScript -->
+    <script src="index.js"></script>
 
 </body>
 
